@@ -31,3 +31,8 @@ class Stack:
             return self.top_item.get_value()
         else:
             print("Nothing to see here!")
+
+    # Define has_space() and is_empty() below:
+    def has_space(self):
+        if self.limit > self.size:
+            return True

@@ -1,7 +1,5 @@
 from node import Node
 
-# Add your Stack class below:
-
 
 class Stack:
     def __init__(self):

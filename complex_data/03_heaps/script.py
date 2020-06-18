@@ -1,7 +1,9 @@
 # import heap class
 from min_heap import MinHeap 
 
-# Make an instance of MinHeap
-heap = MinHeap()
-# Print out the internal list
-print(heap.heap_list)
+min_heap = MinHeap()
+print(min_heap.heap_list)
+
+# testing out .add()
+min_heap.add(42)
+print(min_heap.heap_list)

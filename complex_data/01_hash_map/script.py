@@ -24,7 +24,20 @@ class HashMap:
       self.array[array_index] = [key, value]
       return
 
-    # current_array_value currently holds different key
+    # current_array_value currently holds different key 
+    else:
+      number_collisions = 1
+      while current_array_value[0] != key:
+        new_hash_code = self.hash(key, number_collisions)
+        new_array_index = self.compressor(new_hash_code)
+        current_array_value = self.array[new_array_index]
+        if current_array_value == None:
+          self.array[new_array_index] = [key, value]
+          return
+        elif current_array_value[0] == key:
+          self.array[array_index] = [key, value]
+        else:
+          number_collisions += 1
     return
 
   def retrieve(self, key):

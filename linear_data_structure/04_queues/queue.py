@@ -17,4 +17,9 @@ class Queue:
   def get_size(self):
     return self.size
   
-
+  def has_space(self):
+    if self.max_size == None:
+      return True
+    else:
+      return self.max_size > self.get_size()
+    

@@ -19,3 +19,8 @@ class HashMap:
   def retrieve(self, key):
     array_index = self.compressor(self.hash(key))
     return self.array[array_index]
+
+# Create an instance
+hash_map = HashMap(20)
+hash_map.assign("gneiss", "metamorphic")
+print(hash_map.retrieve("gneiss"))

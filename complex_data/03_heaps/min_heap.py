@@ -9,3 +9,5 @@ class MinHeap:
     self.heap_list.append(element)
     self.heapify_up()
   
+  def heapify_up(self):
+    print("Restoring the heap property...")

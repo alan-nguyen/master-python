@@ -17,15 +17,27 @@ class TreeNode:
     # self.children = new_children
     self.children = [child for child in self.children if child != child_node]
 
-root = TreeNode("I am Root")
-child = TreeNode("A wee sappling")
+  def traverse(self):
+    print(self.value)
+    for child in self.children:
+      print(child.value)
 
+root = TreeNode("CEO")
+first_child = TreeNode("Vice-President")
+second_child = TreeNode("Head of Marketing")
+
+root.add_child(first_child)
+root.add_child(second_child)
+root.traverse()
+
+# root = TreeNode("I am Root")
+# child = TreeNode("A wee sappling")
 
 # Create an instance
-root = TreeNode("I am Root")
-child = TreeNode("A wee sappling")
-root.add_child(child)
-bad_seed = TreeNode("Root Rot!")
-root.add_child(child)
-root.add_child(bad_seed)
-root.remove_child(bad_seed)
+# root = TreeNode("I am Root")
+# child = TreeNode("A wee sappling")
+# root.add_child(child)
+# bad_seed = TreeNode("Root Rot!")
+# root.add_child(child)
+# root.add_child(bad_seed)
+# root.remove_child(bad_seed)

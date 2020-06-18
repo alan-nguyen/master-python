@@ -36,7 +36,7 @@ class MinHeap:
       else:
         print(f"{right_child} is smaller than {left_child}")
         return self.right_child_idx(idx)
-        
+
   # HEAP HELPER METHODS
   def parent_idx(self, idx):
     return idx // 2
@@ -47,6 +47,10 @@ class MinHeap:
   def right_child_idx(self, idx):
     return idx * 2 + 1
 
+  def child_present(self, idx):
+    return self.left_child_idx(idx) <= self.count
+
+  # END OF HEAP HELPER METHODS
   def heapify_up(self):
     print("Heapifying up")
     # start at the last element of the list

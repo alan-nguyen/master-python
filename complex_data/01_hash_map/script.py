@@ -12,7 +12,7 @@ class HashMap:
   def compressor(self, hash_code):
     return hash_code % self.array_size
 
- def assign(self, key, value):
+  def assign(self, key, value):
     array_index = self.compressor(self.hash(key))
     if self.array[array_index]:
       current_array_value = self.array[array_index]
@@ -23,7 +23,16 @@ class HashMap:
 
   def retrieve(self, key):
     array_index = self.compressor(self.hash(key))
-    return self.array[array_index]
+    possible_return_value = self.array[array_index]
+
+    if possible_return_value is None:
+        return None
+
+    if possible_return_value[0] == key:
+        return possible_return_value[1]
+
+    # possible_return_value holds different key
+    return
 
 # Create an instance
 hash_map = HashMap(20)

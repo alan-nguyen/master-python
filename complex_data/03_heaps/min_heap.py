@@ -3,6 +3,19 @@ class MinHeap:
     self.heap_list = [None]
     self.count = 0
   
+  def retrieve_min(self): 
+    if self.count == 0:
+      print("No items in heap")
+      return None
+    min = self.heap_list[1]
+    print(f"Removing: {min} from {self.heap_list}")
+    self.heap_list[1] = self.heap_list[self.count]
+    self.heap_list[self.count] = min
+    self.heap_list.pop()
+    self.count -= 1
+    print(f"Last element moved to fisrt: {self.heap_list}")
+    return min
+  
   def add(self, element):
     print(f"Adding {element} to {self.heap_list}")
     self.count += 1

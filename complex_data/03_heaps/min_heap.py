@@ -70,5 +70,14 @@ class MinHeap:
     print(f"Heap Restored {self.heap_list}")
 
   def heapify_down(self):
-    print("Heapifying down! {incomplete}")
-    idx = 1 
+    idx = 1
+    while self.child_present(idx):
+      print('Heapifying down!')
+      smaller_child_idx = self.get_smaller_child_idx(idx)
+      child = self.heap_list[smaller_child_idx]
+      parent = self.heap_list[idx]
+      if parent > child:
+        self.heap_list[idx] = child
+        self.heap_list[smaller_child_idx] = parent
+      idx = smaller_child_idx
+    print(f"Heap Restored! {self.heap_list}")

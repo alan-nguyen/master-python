@@ -8,5 +8,13 @@ class Queue:
         self.max_size = max_size
         self.size = 0
 
-    def peek(self):
-        return self.head.get_value()
+  def peek(self):
+    if self.size > 0:
+      return self.head.get_value()
+    else:
+      print("Nothing to see here!")
+  
+  def get_size(self):
+    return self.size
+  
+

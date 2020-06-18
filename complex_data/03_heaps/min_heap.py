@@ -23,6 +23,20 @@ class MinHeap:
     self.heap_list.append(element)
     self.heapify_up()
 
+  def get_smaller_child_idx(self, idx):
+    if self.right_child_idx(idx) > self.count:
+      print('There is only a left child')
+      return self.left_child_idx(idx)
+    else:
+      left_child = self.heap_list[self.left_child_idx(idx)]
+      right_child = self.heap_list[self.right_child_idx(idx)]
+      if left_child < right_child:
+        print(f"{left_child} is smaller than {right_child}")
+        return self.left_child_idx(idx)
+      else:
+        print(f"{right_child} is smaller than {left_child}")
+        return self.right_child_idx(idx)
+        
   # HEAP HELPER METHODS
   def parent_idx(self, idx):
     return idx // 2

@@ -11,3 +11,13 @@ class MinHeap:
   
   def heapify_up(self):
     print("Restoring the heap property...")
+
+  # HEAP HELPER METHODS
+  def parent_idx(self, idx):
+    return idx // 2
+
+  def left_child_idx(self, idx):
+    return idx * 2
+
+  def right_child_idx(self, idx):
+    return idx * 2 + 1

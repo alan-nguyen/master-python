@@ -23,3 +23,5 @@ class Queue:
     else:
       return self.max_size > self.get_size()
     
+  def is_empty(self):
+    return self.size == 0

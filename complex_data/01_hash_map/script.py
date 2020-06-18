@@ -14,12 +14,18 @@ class HashMap:
 
   def assign(self, key, value):
     array_index = self.compressor(self.hash(key))
-    if self.array[array_index]:
-      current_array_value = self.array[array_index]
-      if current_array_value.key == key:
-        self.array[array_index] = value
-      else: 
-        self.array[array_index] = [key, value]
+    current_array_value = self.array[array_index]
+
+    if current_array_value is None:
+      self.array[array_index] = [key, value]
+      return
+
+    if current_array_value[0] == key:
+      self.array[array_index] = [key, value]
+      return
+
+    # current_array_value currently holds different key
+    return
 
   def retrieve(self, key):
     array_index = self.compressor(self.hash(key))

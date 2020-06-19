@@ -10,11 +10,11 @@ class Graph:
     print(f"Adding {vertex.value}")
     self.graph_dict[vertex.value] = vertex
 
-  def add_edge(self, from_vertex, to_vertex):
-    print(f"Adding edge from {from_vertex.value} to {to_vertex.value}")
-    self.graph_dict[from_vertex.value].add_edge(to_vertex.value)
+  def add_edge(self, from_vertex, to_vertex, weight=0):
+    self.graph_dict[from_vertex.value].add_edge(to_vertex.value, weight)
     if not self.directed:
-      self.graph_dict[to_vertex.value].add_edge(from_vertex.value)
+      self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
+
 
 # # --------- Test add_vertex -------------------
 # grand_central = Vertex("Grand Central Station")

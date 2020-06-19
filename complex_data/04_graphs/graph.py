@@ -10,4 +10,11 @@ class Graph:
     print(f"Adding {vertex.value}")
     self.graph_dict[vertex.value] = vertex
 
+# --------- Test add_vertex -------------------
+grand_central = Vertex("Grand Central Station")
 
+railway = Graph()
+
+print(railway.graph_dict)
+railway.add_vertex(grand_central)
+print(railway.graph_dict)

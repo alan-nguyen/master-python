@@ -15,6 +15,12 @@ class Graph:
     if not self.directed:
       self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
 
+  def find_path(self, start_vertex, end_vertex):
+    print(f"You are searching from {start_vertex} to {end_vertex}")
+    start = [start_vertex]
+    while len(start) > 0:
+      current_vertex = start.pop()
+      print(current_vertex)
 
 # # --------- Test add_vertex -------------------
 # grand_central = Vertex("Grand Central Station")

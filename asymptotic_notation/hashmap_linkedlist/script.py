@@ -35,4 +35,3 @@ linked_list_zachary_disease = traverse.get_value()[1]
 print("Zachary's disease is {0}".format(linked_list_zachary_disease))
 linked_list_runtime = "N"
 print("The runtime of retrieving the first value added to a linked list is O({0})\n\n".format(linked_list_runtime))
-

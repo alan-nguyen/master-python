@@ -6,3 +6,5 @@ class Vertex:
   def get_edges(self):
     return list(self.edges.keys())
 
+# Create an instance
+station = Vertex("Cronk")

@@ -3,3 +3,6 @@ class Vertex:
     self.value = value
     self.edges = {}
   
+  def get_edges(self):
+    return list(self.edges.keys())
+

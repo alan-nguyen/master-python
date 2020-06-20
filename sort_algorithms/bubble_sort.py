@@ -26,3 +26,9 @@ def bubble_sort(arr):
         
   print("POST-OPTIMIZED ITERATION COUNT: {0}".format(iteration_count))
 
+# Test case
+nums = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+print("PRE SORT: {0}".format(nums))
+bubble_sort_unoptimized(nums.copy())
+bubble_sort(nums)
+print("POST SORT: {0}".format(nums))

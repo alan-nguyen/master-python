@@ -13,4 +13,9 @@ def radix_sort(to_be_sorted):
     digit = number_as_a_string[-1]
     digit = int(digit)
     digits[digit].append(number)
-  return digits
+
+  # reassign being_sorted
+  being_sorted = []
+  for numeral in digits:
+    being_sorted.extend(numeral)
+  return being_sorted

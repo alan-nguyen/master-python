@@ -28,4 +28,11 @@ def quicksort(list, start, end):
   quicksort(list, start, less_than_pointer - 1)
   quicksort(list, less_than_pointer + 1, end)
   
-  
+# Test case
+unsorted_list = [3,7,12,24,36,42]
+shuffle(unsorted_list)
+print(unsorted_list)
+# use quicksort to sort the list, then print it out!
+
+quicksort(unsorted_list, 0, len(unsorted_list) - 1)
+print(unsorted_list)

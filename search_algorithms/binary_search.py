@@ -8,3 +8,16 @@ def binary_search(sorted_list, target):
   # Base case found at first search
   if mid_val == target:
     return mid_idx
+  
+  # Recursive steps
+  if mid_val > target:
+    left_half = sorted_list[:mid_idx]
+    return binary_search(left_half, target)
+  if mid_val < target:
+    right_half = sorted_list[mid_idx+1:]
+    result = binary_search(right_half, target)
+    if result == "value not found":
+      return result
+    else:
+      return result + mid_idx + 1
+

@@ -21,3 +21,6 @@ def binary_search(sorted_list, target):
     else:
       return result + mid_idx + 1
 
+# Test case
+sorted_values = [13, 14, 15, 16, 17]
+print(binary_search(sorted_values, 16))

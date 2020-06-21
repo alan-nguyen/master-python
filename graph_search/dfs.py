@@ -3,3 +3,7 @@ def dfs(graph, current_vertex, target_value, visited=None):
     visited = []
 	
   visited.append(current_vertex)
+  # Base case
+  if current_vertex == target_value:
+    return visited
+	

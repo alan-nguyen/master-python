@@ -16,3 +16,10 @@ def binary_search(sorted_list, left_pointer, right_pointer, target):
     # Reduce the sub-list by passing in a new left_pointer
     return binary_search(sorted_list, mid_idx + 1, right_pointer, target)
 
+# Test case 
+values = [77, 80, 102, 123, 288, 300, 540]
+start_of_values = 0
+end_of_values = len(values)
+result = binary_search(values, start_of_values, end_of_values, 288)
+
+print("element {0} is located at index {1}".format(288, result))

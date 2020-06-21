@@ -15,3 +15,12 @@ target_city = "New York City"
 
 tour_stops = linear_search(tour_locations, target_city)
 print(tour_stops)
+
+#Finding the Maximum Value
+def find_max(search_list):
+  maximum_score_index = None
+  for idx in range(len(search_list)):
+    if maximum_score_index is None or search_list[idx] > maximum_score_index:
+      maximum_score_index = idx
+  return maximum_score_index
+

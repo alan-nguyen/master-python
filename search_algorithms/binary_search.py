@@ -1,26 +1,18 @@
-def binary_search(sorted_list, target):
-  # Base case list is empty
-  if sorted_list == []:
+def binary_search(sorted_list, left_pointer, right_pointer, target):
+  # this condition indicates it reached an empty "sub-list"
+  if left_pointer >= right_pointer:
     return "value not found"
-  mid_idx = len(sorted_list) // 2
+	
+  # Calculate the middle index from the pointers 
+  mid_idx = (left_pointer + right_pointer) // 2
   mid_val = sorted_list[mid_idx]
-  
-  # Base case found at first search
+
   if mid_val == target:
     return mid_idx
-  
-  # Recursive steps
   if mid_val > target:
-    left_half = sorted_list[:mid_idx]
-    return binary_search(left_half, target)
+    # Reduce the sub-list by passing in a new right_pointer
+    return binary_search(sorted_list, left_pointer, mid_idx, target)
   if mid_val < target:
-    right_half = sorted_list[mid_idx+1:]
-    result = binary_search(right_half, target)
-    if result == "value not found":
-      return result
-    else:
-      return result + mid_idx + 1
+    # Reduce the sub-list by passing in a new left_pointer
+    return binary_search(sorted_list, mid_idx + 1, right_pointer, target)
 
-# Test case
-sorted_values = [13, 14, 15, 16, 17]
-print(binary_search(sorted_values, 16))

@@ -24,3 +24,7 @@ def find_max(search_list):
       maximum_score_index = idx
   return maximum_score_index
 
+# Test case
+test_scores = [88, 93, 75, 100, 80, 67, 71, 92, 90, 83]
+highest_score = find_max(test_scores)
+print(highest_score)

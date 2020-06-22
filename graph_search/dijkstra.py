@@ -9,4 +9,14 @@ def dijkstras(graph, start):
   distances[start] = 0
   # List contains tuple of distance and vertex
   vertices_to_explore = [(0, start)]
+  # Loop until vertices_to_explore is empty
+  while vertices_to_explore:
+    current_distance, current_vertex = heappop(vertices_to_explore)
+    for neighbor, edge_weight in graph[current_vertex]:
+      new_distance = current_distance + edge_weight
+      if new_distance < distances[neighbor]:
+        distances[neighbor] = new_distance
+        heappush(vertices_to_explore, (new_distance, neighbor))
+
+  return distances
 

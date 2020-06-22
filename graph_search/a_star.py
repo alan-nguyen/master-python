@@ -3,6 +3,13 @@ from heapq import heappop, heappush
 from manhattan_graph import manhattan_graph, penn_station, grand_central_station
 from euclidean_graph import euclidean_graph, bengaluru, jaipur
 
+# Manhattan Heuristic:
+def heuristic(start, target):
+  x_distance = abs(start.position[0] - target.position[0])
+  y_distance = abs(start.position[1] - target.position[1])
+  return x_distance + y_distance
+
+
 def a_star(graph, start, target):
   print("Starting A* algorithm!")
   count = 0

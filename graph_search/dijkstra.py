@@ -20,3 +20,13 @@ def dijkstras(graph, start):
 
   return distances
 
+# Test case
+graph = {
+        'A': [('B', 10), ('C', 3)],
+        'C': [('D', 2)],
+        'D': [('E', 10)],
+        'E': [],
+        'B': [('C', 3), ('D', 2)]
+    }
+distances_from_a = dijkstras(graph, 'A')
+print("\n\nShortest Distances: {0}".format(distances_from_a))

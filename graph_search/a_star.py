@@ -9,6 +9,11 @@ def heuristic(start, target):
   y_distance = abs(start.position[1] - target.position[1])
   return x_distance + y_distance
 
+# Euclidean Heuristic:
+#def heuristic(start, target):
+#  x_distance = abs(start.position[0] - target.position[0])
+#  y_distance = abs(start.position[1] - target.position[1])
+#  return sqrt(x_distance * x_distance + y_distance * y_distance)
 
 def a_star(graph, start, target):
   print("Starting A* algorithm!")

@@ -41,4 +41,6 @@ def a_star(graph, start, target):
   
   return paths_and_distances[target][1]
 
-
+# Test case
+a_star(manhattan_graph, penn_station, grand_central_station)
+# a_star(euclidean_graph, jaipur, bengaluru)

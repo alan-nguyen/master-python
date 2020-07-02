@@ -11,3 +11,13 @@ def count_wins(dice1, dice2):
   
     return (dice1_wins, dice2_wins)
 
+# Test cases
+dice1 = [1, 2, 3, 4, 5, 6]
+dice2 = [1, 2, 3, 4, 5, 6]
+# Expect 15, 15
+print(count_wins(dice1, dice2)) 
+
+dice1 = [1, 1, 6, 6, 8, 8]
+dice2 = [2, 2, 4, 4, 9, 9]
+# Expect 16, 20
+print(count_wins(dice1, dice2)) 

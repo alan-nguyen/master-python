@@ -42,3 +42,15 @@ def find_the_best_dice(dices):
     # No best dice
     return -1
 
+# Test cases
+test1 =  [[1, 1, 6, 6, 8, 8], [2, 2, 4, 4, 9, 9], [3, 3, 5, 5, 7, 7]]
+# Expected result -1
+print(find_the_best_dice(test1))
+
+test2 = [[1, 1, 2, 4, 5, 7], [1, 2, 2, 3, 4, 7], [1, 2, 3, 4, 5, 6]]
+# Expected result 2
+print(find_the_best_dice(test2))
+
+test3 = [[3, 3, 3, 3, 3, 3], [6, 6, 2, 2, 2, 2], [4, 4, 4, 4, 0, 0], [5, 5, 5, 1, 1, 1]]
+# Expected result -1
+print(find_the_best_dice(test3))
